@@ -2,7 +2,7 @@
 ## Project 3: Collaboration and Competition
 
 The [Unity ML-Agents toolkit](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md) contains the [Tennis Environment](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis) in which two tennis rackets keep the ball in the game by bouncing it over the net. 
-In the [Collaboration and Competition Project](https://github.com/udacity/deep-reinforcement-learning/tree/master/p3_collab-compet) in the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), the Tennis environment has been slightly adapted by Udacity, so there might be differences to the original environment. In a nutshell, we teach the agents to play using a Multiagent Deep Deterministic Policy Gradient method. 
+In the [Collaboration and Competition Project](https://github.com/udacity/deep-reinforcement-learning/tree/master/p3_collab-compet) of the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), the Tennis environment has been slightly adapted by Udacity, so there might be differences to the original environment. In a nutshell, we teach the agents to play using a Multiagent Deep Deterministic Policy Gradient method. 
 
 [//]: # (Image References)
 
