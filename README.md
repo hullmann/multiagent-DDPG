@@ -2,7 +2,7 @@
 ## Project 3: Collaboration and Competition
 
 The [Unity ML-Agents toolkit](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md) contains the [Tennis Environment](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis) in which two tennis rackets keep the ball in the game by bouncing it over the net. 
-In the [Collaboration and Competition Project](https://github.com/udacity/deep-reinforcement-learning/tree/master/p3_collab-compet) in the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), the Tennis environment has been slightly adapted by Udacity, so there might be differences to the original environment.
+In the [Collaboration and Competition Project](https://github.com/udacity/deep-reinforcement-learning/tree/master/p3_collab-compet) in the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), the Tennis environment has been slightly adapted by Udacity, so there might be differences to the original environment. In a nutshell, we teach the agents using a multiagent Deep Deterministic Policy Gradient method. 
 
 [//]: # (Image References)
 
@@ -15,20 +15,16 @@ In this environment, two agents control rackets to bounce a ball over a net. If 
 
 The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation.  Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping. 
 
-The task is episodic, and in order to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically,
+The task is episodic, and in order to solve the environment, the agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically,
 
 - After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores.
 - This yields a single **score** for each episode.
 
 The environment is considered solved, when the average (over 100 episodes) of those **scores** is at least +0.5.
 
-In a nutshell, we teach the robotic arms to follow the targets by the Deep Deterministic Policy Gradient method.
+Due to the continuous action space, classical value-based methods are hard to apply. Instead, we solve the environment using the Multiagent Deep Deterministic Policy Gradient (DDPG) method. This is a flavour of an actor-critic method, where the actor is trained to maximize the expected outcome as is predicted by the critic network. As a special
 
-This environment rewards a reacher in the target location with +0.1. The vector observation space is 33 dimensional and the vector action space has 4 dimensions corresponding to the torque applicable to two joints. The environment is considered 'solved' when an average reward of +30 per episode is achieved. 
-
-Due to the continuous action space, classical value-based methods are hard to apply. Instead, we solve the environment using the Deep Deterministic Policy Gradient (DDPG) method. This is a flavour of an actor-critic method, where the actor is trained to maximize the expected outcome as is predicted by the critic network. The twenty different robotic arms share their experiences and thus learn faster than a single actor.
-
-I worked on this project as part of the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) and adapted the DDPG agent code from [Pendulum project in Udacity's Deep Reinforcement Learning Repository](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum)
+I worked on this project as part of the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) and adapted the DDPG agent code from [Pendulum project in Udacity's Deep Reinforcement Learning Repository](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum) I also reused in the [continuouscontrol-DDPG](https://github.com/hullmann/continuouscontrol-DDPG) and turned it into a multiagent version.
 
 ## Getting Started
 
