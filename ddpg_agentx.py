@@ -15,12 +15,15 @@ LR_ACTOR = 1e-3        # learning rate of the actor
 LR_CRITIC = 1e-2        # learning rate of the critic
 WEIGHT_DECAY = 0   # L2 weight decay
 NUM_AGENTS = 2
-STATE_SIZE = 24
-ACTION_SIZE = 2 
+STATE_SIZE = 24 # 8 dimensional observation space stacked 3 times
+ACTION_SIZE = 2 # move towards the net and upwards
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class MultiagentWrapper:
+    """The two agents are entangled with a shared replay buffer and critic networks that take both of their
+    observation and action spaces as inputs. This is orchestrated by this class to declutter the IPython Notebook."""
+    
     def __init__(self, random_seed, batch_size, buffer):
         self.agents = [ Agent(agentNr, STATE_SIZE, ACTION_SIZE, random_seed) for agentNr in range(0, NUM_AGENTS)]
         random.seed(random_seed)
@@ -60,6 +63,7 @@ class Agent():
         
         Params
         ======
+            ageent_nr (int): number of agent, either 0 or one
             state_size (int): dimension of each state
             action_size (int): dimension of each action
             random_seed (int): random seed
@@ -68,12 +72,7 @@ class Agent():
         self.agent_nr = agent_nr
         self.action_size = action_size
         self.seed = random.seed(random_seed)
-        
-        #if not hasattr(Agent, 'actor_local'):
-        #    Agent.actor_local = Actor(state_size, action_size, random_seed).to(device)
-        #if not hasattr(Agent, 'actor_target'):
-        #    Agent.actor_target = Actor(state_size, action_size, random_seed).to(device)
-        
+
         self.actor_local = Actor(state_size, action_size, random_seed).to(device) #Agent.actor_local
         self.actor_target = Actor(state_size, action_size, random_seed).to(device) #Agent.actor_target
 
@@ -86,8 +85,8 @@ class Agent():
         self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=LR_CRITIC, weight_decay=WEIGHT_DECAY)
 
 
-        self.soft_update(self.critic_local, self.critic_target, 1)
-        self.soft_update(self.actor_local, self.actor_target, 1)    
+        self.soft_update(self.critic_local, self.critic_target, 1) # should amount to a hard update
+        self.soft_update(self.actor_local, self.actor_target, 1)   # should amount to a hard update 
         
         # Noise process
         self.noise = OUNoise(action_size, random_seed)
