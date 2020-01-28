@@ -24,7 +24,7 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 Due to the continuous action space, classical value-based methods are hard to apply. Instead, we solve the environment using the Multiagent Deep Deterministic Policy Gradient (DDPG) method. This is a flavour of an actor-critic method, where the actor is trained to maximize the expected outcome as is predicted by the critic network. As a special
 
-I worked on this project as part of the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) and adapted the DDPG agent code from [Pendulum project in Udacity's Deep Reinforcement Learning Repository](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum) I also reused in the [continuouscontrol-DDPG](https://github.com/hullmann/continuouscontrol-DDPG) and turned it into a multiagent version.
+I worked on this project as part of the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) and adapted the DDPG agent code from [Pendulum project in Udacity's Deep Reinforcement Learning Repository](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum) (I also adapted it in the [continuouscontrol-DDPG project](https://github.com/hullmann/continuouscontrol-DDPG)) and turned it into a multiagent version.
 
 ## Getting Started
 
