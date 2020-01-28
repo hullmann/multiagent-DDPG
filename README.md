@@ -2,7 +2,7 @@
 ## Project 3: Collaboration and Competition
 
 The [Unity ML-Agents toolkit](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md) contains the [Tennis Environment](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis) in which two tennis rackets keep the ball in the game by bouncing it over the net. 
-In the [Collaboration and Competition Project](https://github.com/udacity/deep-reinforcement-learning/tree/master/p3_collab-compet) in the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), the Tennis environment has been slightly adapted by Udacity, so there might be differences to the original environment. In a nutshell, we teach the agents using a multiagent Deep Deterministic Policy Gradient method. 
+In the [Collaboration and Competition Project](https://github.com/udacity/deep-reinforcement-learning/tree/master/p3_collab-compet) in the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), the Tennis environment has been slightly adapted by Udacity, so there might be differences to the original environment. In a nutshell, we teach the agents to play using a Multiagent Deep Deterministic Policy Gradient method. 
 
 [//]: # (Image References)
 
@@ -22,7 +22,7 @@ The task is episodic, and in order to solve the environment, the agents must get
 
 The environment is considered solved, when the average (over 100 episodes) of those **scores** is at least +0.5.
 
-Due to the continuous action space, classical value-based methods are hard to apply. Instead, we solve the environment using the Multiagent Deep Deterministic Policy Gradient (DDPG) method. This is a flavour of an actor-critic method, where the actor is trained to maximize the expected outcome as is predicted by the critic network. As a special
+Due to the continuous action space, classical value-based methods are hard to apply. Instead, we solve the environment using the Multiagent Deep Deterministic Policy Gradient (DDPG) method. This is a flavour of an actor-critic method, where the actor is trained to maximize the expected outcome as is predicted by the critic network. As a special twist, our critics also _see_ the observation space and next actions of the opponents. This is allowed, as this only happens during training. When we test the agents, we don't need the critics anymore, but only the actors, and they don't need information from or about the opponents.
 
 I worked on this project as part of the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) and adapted the DDPG agent code from the [Pendulum project in Udacity's Deep Reinforcement Learning Repository](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum) and turned it into a multiagent version.
 
