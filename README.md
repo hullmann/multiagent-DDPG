@@ -1,9 +1,8 @@
 # Deep Reinforcement Learning Udacity Nanodegree
 ## Project 3: Collaboration and Competition
 
-For this project, you will work with the [Tennis](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis) environment.
-
-The [Unity ML-Agents toolkit](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md) contains the [Reacher Environment](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) in which double-jointed arms have to move to target locations (see [video](https://www.youtube.com/watch?v=2N9EoF6pQyE)).
+The [Unity ML-Agents toolkit](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md) contains the [Tennis Environment](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#tennis) in which two tennis rackets keep the ball in the game by bouncing it over the net. 
+In the [Collaboration and Competition Project](https://github.com/udacity/deep-reinforcement-learning/tree/master/p3_collab-compet) in the [Deep Reinforcement Learning Udacity Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), the Tennis environment has been slightly adapted by Udacity, so there might be differences to the original environment.
 
 [//]: # (Image References)
 
@@ -12,7 +11,6 @@ The [Unity ML-Agents toolkit](https://github.com/Unity-Technologies/ml-agents/bl
 ![image1]
 
 ### Project details
-
 In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1.  If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01.  Thus, the goal of each agent is to keep the ball in play.
 
 The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation.  Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping. 
@@ -44,7 +42,7 @@ I worked on this project as part of the [Deep Reinforcement Learning Udacity Nan
     - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86.zip)
     - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip)
 
-Place the file in the `continuouscontrol-DDPG/` folder (cloned in step 2.), and unzip the file. 
+Place the file in the `multiagent-DDPG/` folder (cloned in step 2.), and unzip the file. 
 
 ## Instructions
-Follow the instructions in [Continuous_Control.ipynb](https://github.com/hullmann/continuouscontrol-DDPG/blob/master/Continuous_Control.ipynb) to train your agent or scroll to the bottom of the code to let the agent run based on pretrained weights. Technical details of the solution are documented in [Report.ipynb](https://github.com/hullmann/continuouscontrol-DDPG/blob/master/Report.ipynb) .
+Follow the instructions in [Tennis.ipynb](https://github.com/hullmann/multiagent-DDPG/blob/master/Tennis.ipynb) to train your agent or scroll to the bottom of the code to let the agent run based on pretrained weights. Technical details of the solution are documented in [Report.ipynb](https://github.com/hullmann/multiagent-DDPG/blob/master/Report.ipynb) .
